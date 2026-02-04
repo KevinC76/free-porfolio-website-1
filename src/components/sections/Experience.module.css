@@ -1,0 +1,127 @@
+.section {
+  padding: var(--space-24) 0;
+  background-color: #0c101a;
+}
+
+.titleWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centering the title */
+  gap: var(--space-2);
+  margin-bottom: var(--space-16);
+  text-align: center;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: white;
+}
+
+.titleIndicator {
+  height: 4px;
+  width: 48px;
+  background-color: var(--accent-primary);
+  border-radius: 9999px;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px; /* Centering content for better readability */
+  margin: 0 auto;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: var(--space-6);
+}
+
+.lineWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  padding-top: var(--space-1);
+}
+
+.iconWrapper {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(19, 73, 236, 0.1);
+  border: 1px solid rgba(19, 73, 236, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--accent-primary);
+  transition: var(--transition-fast);
+}
+
+.item:first-child .iconWrapper {
+  background-color: var(--accent-primary);
+  color: white;
+  box-shadow: 0 0 20px rgba(19, 73, 236, 0.2);
+}
+
+.icon {
+  stroke-width: 2.5px;
+}
+
+.line {
+  width: 1px;
+  flex-grow: 1;
+  background: linear-gradient(to bottom, rgba(19, 73, 236, 0.2) 0%, var(--border-subtle) 100%);
+  min-height: 60px;
+}
+
+.content {
+  padding-bottom: var(--space-12);
+}
+
+.item:last-child .content {
+  padding-bottom: var(--space-4);
+}
+
+.role {
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  margin-bottom: var(--space-1);
+}
+
+.companyInfo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  color: var(--accent-primary);
+}
+
+.separator {
+  color: var(--text-muted);
+}
+
+.period {
+  color: var(--text-muted);
+}
+
+.description {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-size: var(--fs-base);
+  max-width: 640px;
+  font-weight: 400;
+}
+
+@media (max-width: 640px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
